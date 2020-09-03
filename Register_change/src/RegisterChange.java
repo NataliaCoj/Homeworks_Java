@@ -1,7 +1,18 @@
 public class RegisterChange {
-    public static void main(String[] args) {
-        String str = "You won € 5000!";
-        System.out.println(str.toLowerCase()); // you won € 5000!
-        System.out.println(str.toUpperCase()); // YOU WON € 5000!
+    /**
+     * @param line to change the case of the letter symbols
+     * @return new string containing the letters with changed case
+     */
+    public String swap(String line) {
+        char[] chars = line.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (Character.isUpperCase(chars[i]))
+                chars[i] = Character.toLowerCase(chars[i]);
+            else if (Character.isLowerCase(chars[i]))
+                chars[i] = Character.toUpperCase(chars[i]);
+        }
+
+        return new String(chars);
     }
 }
