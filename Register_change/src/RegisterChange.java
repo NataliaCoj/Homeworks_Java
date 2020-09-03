@@ -12,7 +12,6 @@ public class RegisterChange {
             else if (Character.isLowerCase(chars[i]))
                 chars[i] = Character.toUpperCase(chars[i]);
         }
-
         return new String(chars);
     }
 }
